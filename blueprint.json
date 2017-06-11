@@ -1,1 +1,143 @@
-{"software":{"name":"orangehrm","major":null,"minor":1,"release_level":"Release candidate","patch":null,"license_name":"apache_v2","license_label":"Apache v2","license_sourceurl":"http://www.apache.org/licenses/LICENSE-2.0.html","full_title":"OrangeHRM","short_title":"OrangeHRM","description":"OrangeHRM Open Source is a free HR management system that offers a wealth of modules to suit the needs of your business. This widely-used system is feature-rich, intuitive and provides an essential HR management platform along with free documentation and access to a broad community of users.","icon_url":"http://www.orangehrm.com/images/MainLogo.png","home_page_url":"","support_page_url":"","about":"","language":"php","framework":"apache_php56","deployment_type":"web","web_root_directory":null,"first_run_url":null,"publisher":"engines","blocking_worker_name":null,"required_memory":128,"recommended_memory":196,"http_protocol":"http_and_https","framework_port_overide":null,"custom_start_script":"","custom_install_script":"","custom_post_install_script":"","service_configurations":[{"publisher_namespace":"EnginesSystem","type_path":"filesystem/local/filesystem","variables":{"group":"_Engines_Builder(group_uid)","engine_path":"conf","volume_src":" ","service_name":"_Engines_Builder(engine_name)","permissions":"rw","user":"_Engines_Builder(data_uid)"}},{"publisher_namespace":"EnginesSystem","type_path":"database/sql/mysql","variables":{"name":"_Engines_Builder(engine_name)","database_host":"_Engines_System(mysql_host)","database_name":"_Engines_Builder(engine_name)","db_username":"_Engines_Builder(engine_name)","db_password":"_Engines_System(random(10))","db_flavor":"mysql2","collation":"utf8_general_ci","full_access":"0"}}],"persistent_directories":[{"path":"app/lib/confs"},{"path":"app/lib/logs"},{"path":"app/symfony/log"}],"replacement_strings":[],"persistent_files":[{"path":"app/symfony/config/databases.yml"}],"installed_packages":[{"name":"orangehrm-3.3.3.zip","source_url":"http://downloads.sourceforge.net/project/orangehrm/stable/3.3.3/orangehrm-3.3.3.zip","destination":"./","extraction_command":"unzip -u","path_to_extracted":"orangehrm-3.3.3"}],"system_packages":[{"package":"php5.6-xmlrpc"},{"package":"php5.6-xml"}],"workers":[],"ports":[],"external_repositories":[],"rake_tasks":[],"template_files":[{"title":"mailConf.php","path":"app/lib/confs/mailConf.php","content":"\u003c?php\r\n $this-\u003esmtpHost = '_Engines_System(smtp_host)';\r\n$this-\u003emailType = 'smtp';\r\n $this-\u003emailAddress = 'orangehrm@_Engines_Builder(fqdn)';\r\n\r\n?\u003e"}],"file_write_permissions":[{"path":"symfony/config","recursive":true},{"path":"symfony/apps/orangehrm/config","recursive":true},{"path":"symfony/cache","recursive":true}],"custom_php_inis":[],"apache_htaccess_files":[],"apache_httpd_configurations":[],"modules":[],"variables":[],"component_sources":[],"component_path":"","extract_components":false,"installation_report_template":"Goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/\r\nFollow the wizard\r\nAt Step2 Database Configuration\r\nDatabase to Use: Select Existing Empty Database from the pull down menu\r\nDatabase Host Name: _Engines_Environment(dbhost)\r\nDatabase Host Port  Leaveas 3306\r\nDatabase Name: _Engines_Environment(dbname)\r\nOrangeHRM Database Username: _Engines_Environment(dbuser)\r\nOrangeHRM Database User Password: _Engines_Environment(dbpasswd)\r\n\r\n\r\nFollow the rest of the wizard to complete the installation","continuous_deployment":false,"database_seed_file":"","actionators":{}}}
+{
+  "schema": {
+    "type": "app_blueprint",
+    "version": {
+      "major": 1,
+      "minor": 0
+    },
+    "origin": "Engines Developer Studio 0.2"
+  },
+  "metadata": {
+    "blueprint": {
+      "version": {
+        "major": 0,
+        "minor": 1,
+        "level": "rc",
+        "patch": 0
+      }
+    },
+    "software": {
+      "display": {
+        "title": "OrangeHRM",
+        "label": "OrangeHRM",
+        "description": "OrangeHRM Open Source is a free HR management system that offers a wealth of modules to suit the needs of your business. This widely-used system is feature-rich, intuitive and provides an essential HR management platform along with free documentation and access to a broad community of users."
+      },
+      "license": {
+        "label": "Apache v2",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      }
+    }
+  },
+  "software": {
+    "base": {
+      "name": "orangehrm",
+      "framework": "apache_php56",
+      "deployment_type": "web",
+      "http_protocol": "http_and_https",
+      "memory": {
+        "required": 128,
+        "recommended": 196
+      },
+      "installation_report": "Goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/\r\nFollow the wizard\r\nAt Step2 Database Configuration\r\nDatabase to Use: Select Existing Empty Database from the pull down menu\r\nDatabase Host Name: _Engines_Environment(dbhost)\r\nDatabase Host Port  Leaveas 3306\r\nDatabase Name: _Engines_Environment(dbname)\r\nOrangeHRM Database Username: _Engines_Environment(dbuser)\r\nOrangeHRM Database User Password: _Engines_Environment(dbpasswd)\r\n\r\n\r\nFollow the rest of the wizard to complete the installation"
+    },
+    "scripts": {
+      "start": {
+        "language": "sh"
+      },
+      "install": {
+        "language": "sh"
+      },
+      "post_install": {
+        "language": "sh"
+      },
+      "shutdown": {
+        "language": "sh"
+      }
+    },
+    "system_packages": [
+      {
+        "package": "php5.6-xmlrpc"
+      },
+      {
+        "package": "php5.6-xml"
+      }
+    ],
+    "installed_packages": [
+      {
+        "name": "orangehrm-3.3.3.zip",
+        "source_url": "http://downloads.sourceforge.net/project/orangehrm/stable/3.3.3/orangehrm-3.3.3.zip",
+        "destination": "./",
+        "extraction_command": "unzip -u",
+        "path_to_extracted": "orangehrm-3.3.3"
+      }
+    ],
+    "service_configurations": [
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "filesystem/local/filesystem",
+        "variables": {
+          "group": "_Engines_Builder(group_uid)",
+          "engine_path": "conf",
+          "volume_src": " ",
+          "service_name": "_Engines_Builder(engine_name)",
+          "permissions": "rw",
+          "user": "_Engines_Builder(data_uid)"
+        }
+      },
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "database/sql/mysql",
+        "variables": {
+          "name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(mysql_host)",
+          "database_name": "_Engines_Builder(engine_name)",
+          "db_username": "_Engines_Builder(engine_name)",
+          "db_password": "_Engines_System(random(10))",
+          "db_flavor": "mysql2",
+          "collation": "utf8_general_ci",
+          "full_access": "0"
+        }
+      }
+    ],
+    "template_files": [
+      {
+        "path": "app/lib/confs/mailConf.php",
+        "language": "text",
+        "content": "<?php\r\n $this->smtpHost = '_Engines_System(smtp_host)';\r\n$this->mailType = 'smtp';\r\n $this->mailAddress = 'orangehrm@_Engines_Builder(fqdn)';\r\n\r\n?>"
+      }
+    ],
+    "database_seed": {
+      "language": "text"
+    },
+    "file_write_permissions": [
+      {
+        "path": "symfony/config",
+        "recursive": true
+      },
+      {
+        "path": "symfony/apps/orangehrm/config",
+        "recursive": true
+      },
+      {
+        "path": "symfony/cache",
+        "recursive": true
+      }
+    ],
+    "persistent_directories": [
+      {
+        "path": "app/lib/confs"
+      },
+      {
+        "path": "app/lib/logs"
+      },
+      {
+        "path": "app/symfony/log"
+      }
+    ],
+    "persistent_files": [
+      {
+        "path": "app/symfony/config/databases.yml"
+      }
+    ]
+  }
+}
