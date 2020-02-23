@@ -27,7 +27,7 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "timestamp": "2020-02-24T10:23:18+11:00"
+    "timestamp": "2020-02-24T10:49:39+11:00"
   },
   "software": {
     "base": {
@@ -71,6 +71,18 @@
         "destination": "./",
         "extraction_command": "unzip -u",
         "path_to_extracted": "orangehrm-4.3.4"
+      }
+    ],
+    "required_modules": [
+      {
+        "name": "xml",
+        "type": "php",
+        "os_package": "php-xml"
+      },
+      {
+        "name": "xmlrpc",
+        "type": "php",
+        "os_package": "php-xmlrpc"
       }
     ],
     "service_configurations": [
