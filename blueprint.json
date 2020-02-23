@@ -27,12 +27,12 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "timestamp": "2020-02-24T09:58:07+11:00"
+    "timestamp": "2020-02-24T10:23:18+11:00"
   },
   "software": {
     "base": {
       "name": "orangehrm",
-      "framework": "apache_php56",
+      "framework": "apache_php",
       "deployment_type": "web",
       "http_protocol": "http_and_https",
       "memory": {
