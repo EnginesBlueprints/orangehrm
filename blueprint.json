@@ -27,7 +27,7 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "timestamp": "2020-02-24T09:14:19+11:00"
+    "timestamp": "2020-02-24T09:58:07+11:00"
   },
   "software": {
     "base": {
@@ -98,17 +98,6 @@
           "db_password": "_Engines_System(random(10))",
           "collation": "utf8_general_ci",
           "full_access": "0"
-        }
-      },
-      {
-        "publisher_namespace": "EnginesSystem",
-        "type_path": "cron",
-        "variables": {
-          "action_type": null,
-          "cron_job": null,
-          "title": null,
-          "when": null,
-          "notification_address": "default"
         }
       }
     ],
