@@ -27,7 +27,7 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "timestamp": "2020-02-24T10:49:39+11:00"
+    "timestamp": "2020-02-24T11:44:11+11:00"
   },
   "software": {
     "base": {
@@ -55,14 +55,6 @@
         "language": "sh"
       }
     },
-    "system_packages": [
-      {
-        "package": "php5.6-xmlrpc"
-      },
-      {
-        "package": "php5.6-xml"
-      }
-    ],
     "installed_packages": [
       {
         "name": "orangehrm-4.3.4.zip",
