@@ -27,7 +27,7 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "timestamp": "2020-02-24T13:23:05+11:00"
+    "timestamp": "2020-02-24T14:00:01+11:00"
   },
   "software": {
     "base": {
@@ -120,6 +120,13 @@
         "path": "app/lib/confs/mailConf.php",
         "language": "text",
         "content": "<?php\r\n $this->smtpHost = '_Engines_System(smtp_host)';\r\n$this->mailType = 'smtp';\r\n $this->mailAddress = 'orangehrm@_Engines_Builder(fqdn)';\r\n\r\n?>"
+      }
+    ],
+    "replacement_strings": [
+      {
+        "string": "/5.7.26/s//5.8/",
+        "source_file": "installer/environmentCheck/system_requirements.yml",
+        "destination_file": "installer/environmentCheck/system_requirements.yml"
       }
     ],
     "database_seed": {
